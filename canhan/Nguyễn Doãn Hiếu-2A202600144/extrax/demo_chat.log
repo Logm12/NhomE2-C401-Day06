@@ -1,0 +1,123 @@
+﻿2026-04-09 08:06:14,102 | INFO | Chatbot initialized | session=demo_log_script | conversation_id=b41eee66-52b3-4e2c-944e-7bcb8a357466
+
+[Q1] User: GiÃ¡ VF8 hiá»‡n táº¡i lÃ  bao nhiÃªu?
+2026-04-09 08:11:27,458 | INFO | USER | GiÃ¡ VF8 hiá»‡n táº¡i lÃ  bao nhiÃªu?
+2026-04-09 08:15:53,914 | INFO | TOOL_CALL | get_price | args={'model_code': 'VF8'}
+2026-04-09 08:19:22,387 | INFO | TOOL_RESULT | get_price | result={'success': True, 'data': {'model': 'VF8', 'name': 'VinFast VF8', 'trims': {'VF 8 Eco': '1.019.000.000 VNÄ', 'VF 8 Plus': '1.199.000.000 VNÄ'}}}
+2026-04-09 08:28:40,075 | INFO | ASSISTANT | GiÃ¡ cá»§a VinFast VF8 hiá»‡n táº¡i nhÆ° sau:
+
+- **VF 8 Eco**: 1.019.000.000 VNÄ
+- **VF 8 Plus**: 1.199.000.000 VNÄ
+
+Náº¿u báº¡n cáº§n thÃªm thÃ´ng tin nÃ o khÃ¡c vá» VF8, hÃ£y cho tÃ´i biáº¿t!
+[A1] Assistant: GiÃ¡ cá»§a VinFast VF8 hiá»‡n táº¡i nhÆ° sau:
+
+- **VF 8 Eco**: 1.019.000.000 VNÄ
+- **VF 8 Plus**: 1.199.000.000 VNÄ
+
+Náº¿u báº¡n cáº§n thÃªm thÃ´ng tin nÃ o khÃ¡c vá» VF8, hÃ£y cho tÃ´i biáº¿t!
+
+[Q2] User: So sÃ¡nh VF7 vÃ  VF8 giÃºp tÃ´i.
+2026-04-09 08:33:16,241 | INFO | USER | So sÃ¡nh VF7 vÃ  VF8 giÃºp tÃ´i.
+2026-04-09 08:38:49,608 | INFO | TOOL_CALL | compare_models | args={'model_codes': ['VF7', 'VF8']}
+2026-04-09 08:38:50,084 | INFO | TOOL_RESULT | compare_models | result={'success': True, 'comparison': {'VF7': {'name': 'VinFast VF7', 'type': 'Mid-size Electric SUV', 'price': '500 - 600 triá»‡u VND', 'seats': '5-7', 'range': '400 - 530 km (CLTC) / 350-450 km (WLTP)', 'features': ['Infotainment 12-inch', 'Panoramic sunroof', 'Cáº£m biáº¿n 360Â°', 'Phanh tá»± Ä‘á»™ng', 'Lane keeping assist']}, 'VF8': {'name': 'VinFast VF8', 'type': 'Premium Electric SUV', 'price': 'N/A', 'seats': 5, 'range': 'N/A', 'features': ['Há»‡ thá»‘ng thÃ´ng tin giáº£i trÃ­ 12.9 inch', 'Káº¿t ná»‘i thÃ´ng minh', 'Phanh tá»± Ä‘á»™ng', 'Há»‡ thá»‘ng treo thÃ­ch á»©ng']}}}
+2026-04-09 08:43:57,663 | INFO | TOOL_CALL | get_specs | args={'model_code': 'VF7'}
+2026-04-09 08:43:57,665 | INFO | TOOL_RESULT | get_specs | result={'success': True, 'data': {'name': 'VinFast VF7', 'type': 'Mid-size Electric SUV', 'description': 'SUV 5-7 chá»— vá»›i cÃ¢n báº±ng hoÃ n háº£o giá»¯a khÃ´ng gian vÃ  hiá»‡u suáº¥t', 'price': '500 - 600 triá»‡u VND', 'battery': '75 kWh - 85 kWh', 'range': '400 - 530 km (CLTC) / 350-450 km (WLTP)', 'power': '150 kW', 'torque': '310 Nm', '0_100': '7.5 giÃ¢y', 'charging_time': '10 giá» (220V) / 50 phÃºt (DC fast)', 'seats': '5-7', 'dimensions': {'length': '4.703m', 'width': '1.860m', 'height': '1.655m'}, 'features': ['Infotainment 12-inch', 'Panoramic sunroof', 'Cáº£m biáº¿n 360Â°', 'Phanh tá»± Ä‘á»™ng', 'Lane keeping assist'], 'release_year': 2021}}
+2026-04-09 08:47:36,112 | INFO | TOOL_CALL | get_specs | args={'model_code': 'VF8'}
+2026-04-09 08:50:44,781 | INFO | TOOL_RESULT | get_specs | result={'success': True, 'data': {'name': 'VinFast VF8', 'type': 'Premium Electric SUV', 'description': 'SUV háº¡ng sang 5 chá»— vá»›i cÃ´ng nghá»‡ tiÃªn tiáº¿n vÃ  hiá»‡u suáº¥t vÆ°á»£t trá»™i', 'trims': {'Eco': {'price': '1.019.000.000 VNÄ', 'price_numeric': 1019000000, 'description': 'Báº£n tiÃªu chuáº©n vá»›i Ä‘áº§y Ä‘á»§ tÃ­nh nÄƒng cáº§n thiáº¿t'}, 'Plus': {'price': '1.199.000.000 VNÄ', 'price_numeric': 1199000000, 'description': 'Báº£n cao cáº¥p vá»›i trang bá»‹ sang trá»ng'}}, 'dimensions': {'length': '4.750 mm', 'width': '1.934 mm', 'height': '1.667 mm', 'wheelbase': '2.950 mm'}, 'motor': {'Eco': {'power': '349 hp', 'torque': '500 Nm', 'type': 'Standard Motor'}, 'Plus': {'power': '402 hp', 'torque': '620 Nm', 'type': 'Dual Motor (AWD)'}}, 'drivetrain': 'Dáº«n Ä‘á»™ng 2 cáº§u toÃ n thá»i gian (AWD)', 'suspension': {'front': 'Há»‡ thá»‘ng treo Ä‘á»™c láº­p thÃ´ng minh', 'rear': 'Thanh Ä‘iá»u hÆ°á»›ng Ä‘a Ä‘iá»ƒm'}, 'interior': {'Eco': {'seat_material': 'Bá»c giáº£ da', 'driver_seat': 'Chá»‰nh Ä‘iá»‡n 8 hÆ°á»›ng', 'features': ['VÃ´ lÄƒng thá»ƒ thao', 'Gháº¿ lÃ¡i vÃ´ lÄƒng', 'Khoang chá»©a hÃ nh lÃ½ rá»™ng rÃ£i']}, 'Plus': {'seat_material': 'Bá»c da nhÃ¢n táº¡o cao cáº¥p', 'driver_seat': 'Chá»‰nh Ä‘iá»‡n 12 hÆ°á»›ng + nhá»› vá»‹ trÃ­', 'features': ['Nhá»› vá»‹ trÃ­ gháº¿ lÃ¡i', 'TÃ­nh nÄƒng thÃ´ng giÃ³ gháº¿', 'TÃ­nh...
+2026-04-09 08:50:44,783 | INFO | ASSISTANT | DÆ°á»›i Ä‘Ã¢y lÃ  sá»± so sÃ¡nh giá»¯a VinFast VF7 vÃ  VF8:
+
+### **VinFast VF7**
+- **Loáº¡i**: SUV Ä‘iá»‡n cá»¡ trung
+- **GiÃ¡**: 500 - 600 triá»‡u VNÄ
+- **Chá»— ngá»“i**: 5-7 chá»—
+- **Pháº¡m vi hoáº¡t Ä‘á»™ng**: 400 - 530 km (CLTC) / 350-450 km (WLTP)
+- **ThÃ´ng sá»‘ ká»¹ thuáº­t**:
+  - **Pin**: 75 kWh - 85 kWh
+  - **CÃ´ng suáº¥t**: 150 kW
+  - **MÃ´ men xoáº¯n**: 310 Nm
+  - **Thá»i gian tÄƒng tá»‘c 0-100 km/h**: 7.5 giÃ¢y
+  - **Thá»i gian sáº¡c**: 10 giá» (220V) / 50 phÃºt (sáº¡c nhanh DC)
+- **KÃ­ch thÆ°á»›c**: 4.703m x 1.860m x 1.655m
+- **TÃ­nh nÄƒng ná»•i báº­t**: 
+  - MÃ n hÃ¬nh thÃ´ng tin giáº£i trÃ­ 12 inch
+  - Cá»­a sá»• trá»i toÃ n cáº£nh
+  - Cáº£m biáº¿n 360Â°
+  - Phanh tá»± Ä‘á»™ng
+  - Há»— trá»£ giá»¯ lÃ n Ä‘Æ°á»ng
+
+### **VinFast VF8**
+- **Loáº¡i**: SUV Ä‘iá»‡n háº¡ng sang
+- **GiÃ¡**: 
+  - VF 8 Eco: 1.019.000.000 VNÄ
+  - VF 8 Plus: 1.199.000.000 VNÄ
+- **Chá»— ngá»“i**: 5 chá»—
+- **ThÃ´ng sá»‘ ká»¹ thuáº­t**:
+  - **KÃ­ch thÆ°á»›c**: 4.750 mm x 1.934 mm x 1.667 mm
+  - **Chiá»u dÃ i cÆ¡ sá»Ÿ**: 2.950 mm
+- **Äá»™ng cÆ¡**:
+  - **VF 8 Eco**: 349 hp, mÃ´ men xoáº¯n 500 Nm
+  - **VF 8 Plus**: 402 hp, mÃ´ men xoáº¯n 620 ...
+[A2] Assistant: DÆ°á»›i Ä‘Ã¢y lÃ  sá»± so sÃ¡nh giá»¯a VinFast VF7 vÃ  VF8:
+
+### **VinFast VF7**
+- **Loáº¡i**: SUV Ä‘iá»‡n cá»¡ trung
+- **GiÃ¡**: 500 - 600 triá»‡u VNÄ
+- **Chá»— ngá»“i**: 5-7 chá»—
+- **Pháº¡m vi hoáº¡t Ä‘á»™ng**: 400 - 530 km (CLTC) / 350-450 km (WLTP)
+- **ThÃ´ng sá»‘ ká»¹ thuáº­t**:
+  - **Pin**: 75 kWh - 85 kWh
+  - **CÃ´ng suáº¥t**: 150 kW
+  - **MÃ´ men xoáº¯n**: 310 Nm
+  - **Thá»i gian tÄƒng tá»‘c 0-100 km/h**: 7.5 giÃ¢y
+  - **Thá»i gian sáº¡c**: 10 giá» (220V) / 50 phÃºt (sáº¡c nhanh DC)
+- **KÃ­ch thÆ°á»›c**: 4.703m x 1.860m x 1.655m
+- **TÃ­nh nÄƒng ná»•i báº­t**: 
+  - MÃ n hÃ¬nh thÃ´ng tin giáº£i trÃ­ 12 inch
+  - Cá»­a sá»• trá»i toÃ n cáº£nh
+  - Cáº£m biáº¿n 360Â°
+  - Phanh tá»± Ä‘á»™ng
+  - Há»— trá»£ giá»¯ lÃ n Ä‘Æ°á»ng
+
+### **VinFast VF8**
+- **Loáº¡i**: SUV Ä‘iá»‡n háº¡ng sang
+- **GiÃ¡**: 
+  - VF 8 Eco: 1.019.000.000 VNÄ
+  - VF 8 Plus: 1.199.000.000 VNÄ
+- **Chá»— ngá»“i**: 5 chá»—
+- **ThÃ´ng sá»‘ ká»¹ thuáº­t**:
+  - **KÃ­ch thÆ°á»›c**: 4.750 mm x 1.934 mm x 1.667 mm
+  - **Chiá»u dÃ i cÆ¡ sá»Ÿ**: 2.950 mm
+- **Äá»™ng cÆ¡**:
+  - **VF 8 Eco**: 349 hp, mÃ´ men xoáº¯n 500 Nm
+  - **VF 8 Plus**: 402 hp, mÃ´ men xoáº¯n 620 Nm
+- **Dáº«n Ä‘á»™ng**: Dáº«n Ä‘á»™ng 2 cáº§u toÃ n thá»i gian (AWD)
+- **Há»‡ thá»‘ng treo**: 
+  - TrÆ°á»›c: Há»‡ thá»‘ng treo Ä‘á»™c láº­p thÃ´ng minh
+  - Sau: Thanh Ä‘iá»u hÆ°á»›ng Ä‘a Ä‘iá»ƒm
+- **TÃ­nh nÄƒng ná»•i báº­t**:
+  - MÃ n hÃ¬nh thÃ´ng tin giáº£i trÃ­ 12.9 inch
+  - Káº¿t ná»‘i thÃ´ng minh
+  - Phanh tá»± Ä‘á»™ng
+  - Há»‡ thá»‘ng treo thÃ­ch á»©ng
+
+### **TÃ³m táº¯t**
+- **VF7** lÃ  má»™t SUV Ä‘iá»‡n cá»¡ trung vá»›i nhiá»u tÃ¹y chá»n chá»— ngá»“i vÃ  pháº¡m vi hoáº¡t Ä‘á»™ng tá»‘t, phÃ¹ há»£p cho gia Ä‘Ã¬nh.
+- **VF8** lÃ  má»™t SUV Ä‘iá»‡n háº¡ng sang vá»›i cÃ´ng nghá»‡ tiÃªn tiáº¿n, hiá»‡u suáº¥t cao hÆ¡n vÃ  nhiá»u tÃ­nh nÄƒng tiá»‡n nghi hÆ¡n.
+
+Náº¿u báº¡n cáº§n thÃªm thÃ´ng tin chi tiáº¿t hoáº·c cÃ³ cÃ¢u há»i khÃ¡c, hÃ£y cho tÃ´i biáº¿t!
+
+[Q3] User: VF9 cÃ³ nhá»¯ng mÃ u nÃ o?
+ | INFO | USER | VF9 cÃ³ nhá»¯ng mÃ u nÃ o?
+ | INFO | TOOL_CALL | get_colors | args={'model_code': 'VF9'}
+ | INFO | TOOL_RESULT | get_colors | result={'success': False, 'error': 'Color info not available for VF9'}
+ | INFO | ASSISTANT | Xin lá»—i, nhÆ°ng thÃ´ng tin vá» mÃ u sáº¯c cá»§a VinFast VF9 hiá»‡n khÃ´ng cÃ³ sáºµn. Náº¿u báº¡n cáº§n thÃ´ng tin vá» cÃ¡c máº«u xe khÃ¡c hoáº·c cÃ³ cÃ¢u há»i nÃ o khÃ¡c, hÃ£y cho tÃ´i biáº¿t!
+[A3] Assistant: Xin lá»—i, nhÆ°ng thÃ´ng tin vá» mÃ u sáº¯c cá»§a VinFast VF9 hiá»‡n khÃ´ng cÃ³ sáºµn. Náº¿u báº¡n cáº§n thÃ´ng tin vá» cÃ¡c máº«u xe khÃ¡c hoáº·c cÃ³ cÃ¢u há»i nÃ o khÃ¡c, hÃ£y cho tÃ´i biáº¿t!
+
+[Q4] User: GiÃ¡ VF10 lÃ  bao nhiÃªu?
+ | INFO | USER | GiÃ¡ VF10 lÃ  bao nhiÃªu?
+ | INFO | ASSISTANT | Hiá»‡n táº¡i, VinFast chá»‰ cÃ³ cÃ¡c máº«u VF3, VF5, VF7, VF8 vÃ  VF9. Máº«u VF10 khÃ´ng cÃ³ trong danh sÃ¡ch sáº£n pháº©m hiá»‡n táº¡i. Náº¿u báº¡n cáº§n thÃ´ng tin vá» má»™t trong cÃ¡c máº«u xe cÃ³ sáºµn, hÃ£y cho tÃ´i biáº¿t!
+[A4] Assistant: Hiá»‡n táº¡i, VinFast chá»‰ cÃ³ cÃ¡c máº«u VF3, VF5, VF7, VF8 vÃ  VF9. Máº«u VF10 khÃ´ng cÃ³ trong danh sÃ¡ch sáº£n pháº©m hiá»‡n táº¡i. Náº¿u báº¡n cáº§n thÃ´ng tin vá» má»™t trong cÃ¡c máº«u xe cÃ³ sáºµn, hÃ£y cho tÃ´i biáº¿t!
+
+Conversation summary:
+{'conversation_id': 'b41eee66-52b3-4e2c-944e-7bcb8a357466', 'session_name': 'demo_log_script', 'created_at': '2026-04-09T16:33:01.320731', 'total_messages': 8, 'user_messages_count': 4, 'assistant_messages_count': 4, 'duration': 35.801186}

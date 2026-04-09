@@ -1,0 +1,24 @@
+﻿[Sample 1] health_check()
+2026-04-08 20:47:12,184 | INFO | health_check | params={} | result={'status': 'error', 'message': 'API not running: [WinError 10061] No connection could be made because the target machine actively refused it'}
+{'status': 'error', 'message': 'API not running: [WinError 10061] No connection could be made because the target machine actively refused it'}
+
+[Sample 2] get_available_models()
+2026-04-08 20:50:41,927 | INFO | get_available_models | params={} | result={'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+{'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+
+[Sample 3] get_sentiment_summary("VF7")
+2026-04-08 20:54:08,315 | INFO | get_sentiment_summary | params={'model_code': 'VF7'} | result={'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+{'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+
+[Sample 4] get_recent_discussions("VF8", limit=2)
+2026-04-08 20:58:36,502 | INFO | get_recent_discussions | params={'model_code': 'VF8', 'limit': 2, 'sentiment_filter': None} | result={'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+{'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+
+[Sample 5] analyze_model_comparison(["VF5", "VF7", "VF9"])
+2026-04-08 21:04:11,744 | INFO | get_sentiment_summary | params={'model_code': 'VF5'} | result={'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+2026-04-08 21:07:59,118 | INFO | get_sentiment_summary | params={'model_code': 'VF7'} | result={'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+2026-04-08 21:12:43,690 | INFO | get_sentiment_summary | params={'model_code': 'VF9'} | result={'status': 'error', 'message': '[WinError 10061] No connection could be made because the target machine actively refused it'}
+2026-04-08 21:12:44,211 | INFO | analyze_model_comparison | params={'model_codes': ['VF5', 'VF7', 'VF9']} | result={'status': 'success', 'comparison': [], 'rankings': []}
+{'status': 'success', 'comparison': [], 'rankings': []}
+
+
