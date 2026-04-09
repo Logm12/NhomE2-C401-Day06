@@ -1,6 +1,7 @@
-# SPEC — Hackathon
+# SPEC — VinFast Car Recommender
 
 **Nhóm:** C401-E2
+
 **Track:** VinFast
 
 **Problem statement:** Khách hàng đến hệ thống showroom hoặc trang web VinFast hiện tại gặp khó khăn khi chưa xác định mẫu xe phù hợp với nhu cầu. Việc tra cứu và so sánh thủ công tốn nhiều thời gian và dễ gây nản chí. Hệ thống AI tư vấn sinh ra để đóng vai trò trợ lý cá nhân, tương tác qua vài câu hỏi trọng tâm nhằm đánh giá nhu cầu, từ đó đề xuất trực tiếp top 3 mẫu xe VinFast tối ưu nhất kèm theo luận điểm hỗ trợ.
