@@ -10,7 +10,7 @@
 
 ## 1. AI Product Canvas
 
-| | Giá trị (Value) | Niềm tin (Trust) & Giới hạn (Boundary) | Khả năng thực thi (Feasibility) |
+| | Giá trị (Value) | Niềm tin (Trust) và Giới hạn (Boundary) | Khả năng thực thi (Feasibility) |
 |---|---|---|---|
 | **Câu hỏi** | Hướng tới người dùng nào? Giữ vai trò giải quyết bài toán gì? | Khi AI gợi ý sai thì chuyện gì xảy ra? Hệ thống giới hạn nội dung thế nào để bảo vệ trải nghiệm? Bằng cách nào người dùng biết để điều chỉnh? | Chi phí hệ thống ra sao? Độ trễ phản hồi (latency)? Rủi ro kỹ thuật chính? |
 | **Trả lời** | **Người dùng:** Khách hàng mua xe đang phân vân. **Khó khăn:** Quá tải thông tin, việc chọn sai phân khúc xe gây lãng phí/mất cơ hội bán hàng. **Giải pháp AI:** Lấy ngân sách và mục đích sử dụng để phân tích và chỉ ra top 3 xe khớp nhất. | **Ranh giới:** AI dùng Node Guard từ chối trả lời mọi câu hỏi lan man, ngoài luồng (off-topic). **Sự cố:** Nếu gợi ý sai mẫu xe, người dùng cảm thấy thông tin không hữu ích. **Khắc phục:** Hệ thống hiển thị sẵn một tùy chọn "Liên hệ tư vấn viên trực tiếp" tại mọi bước. | **Chi phí API:** Mức ~$0.01/lượt gọi. **Độ trễ:** Dưới 20 giây cho một vòng truy vấn. **Rủi ro rào cản:** Khách hàng cung cấp nhu cầu xe chung chung, thông tin giữa các dòng xe có thể bị nhận diện chồng chéo về tập tính vận hành. |
@@ -26,9 +26,9 @@ Cơ sở đánh giá: AI tư vấn với vai trò chắt lọc dữ liệu và g
 
 ---
 
-## 2. User Stories — 4 kịch bản
+## 2. User stories — 4 kịch bản
 
-### Tính năng: Hệ thống Thu thập thông tin (Elicitation) & Gợi ý xe (Recommender)
+### Tính năng: Hệ thống thu thập thông tin (Elicitation) và gợi ý xe (Recommender)
 
 **Kích hoạt:** Người dùng bắt đầu trò chuyện trong khung chat tư vấn hỗ trợ.
 
@@ -41,7 +41,7 @@ Cơ sở đánh giá: AI tư vấn với vai trò chắt lọc dữ liệu và g
 
 ---
 
-## 3. Chỉ số lượng giá (Eval metrics + threshold)
+## 3. Eval metrics + threshold
 
 **Tối ưu Precision hay Recall?**
 [x] Precision
@@ -56,7 +56,7 @@ Cơ sở chọn lựa: Độ chính xác thực tế được đặt lên hàng 
 
 ---
 
-## 4. Top 3 rào cản cốt lõi (Failure modes)
+## 4. Top 3 Failure modes
 
 *Đây là các tình huống người dùng có độ rủi ro trải nghiệm từ hệ thống cao nhất và biện pháp phòng ngừa kiến trúc.*
 
@@ -68,28 +68,28 @@ Cơ sở chọn lựa: Độ chính xác thực tế được đặt lên hàng 
 
 ---
 
-## 5. Phân tích Tỷ suất Sinh lời chuẩn (ROI – 3 Kịch bản)
+## 5. Phân tích ROI – 3 kịch bản:
 
-| | Kịch bản Thận trọng (Conservative) | Kịch bản Khả thi (Realistic) | Kịch bản Lạc quan (Optimistic) |
+| | Conservative | Realistic | Optimistic |
 |---|---|---|---|
-| **Giả định nguồn (Assumption)** | Có khoảng 100 truy cập mới/ngày, đạt 40% khả năng tương tác duy trì đủ phiên AI. | Đạt mốc 500 truy cập/ngày, tỷ lệ hoàn tất tương tác là 60%. | Mở rộng diện tiếp cận lên 2000 truy cập/ngày, tỷ lệ hoàn thành 80%. |
-| **Chi phí máy chủ tính toán (Cost)** | Trả phí ~$1/ngày cho toàn bộ lượt API Inference model nhỏ gọn. | ~$5/ngày chi phí hệ thống. | ~$20/ngày tổng chi phí server lẫn model. |
-| **Lợi ích sinh ra (Benefit)** | Chia sẻ một phần nhẹ sức đỡ (tiết kiệm ước tính khoảng 3 giờ nhân sự tương tác tư vấn chát/ngày). | Chia tải hiệu quả tới 15 giờ xử lý khách hàng thông tin cơ bản; phân tách luồng nhóm khách mua thực tế. | Tối giản nguồn lực (cắt giảm hơn 60 giờ làm việc) - thu gom trọn bộ các lead khách hàng ở bước chuyển tiếp phễu nóng (mục chat hẹn lịch lái thử). |
-| **Lợi ích Ròng (Net)** | Hệ thống bù đắp được chi phí trực tiếp nhưng chênh lệch chưa ấn tượng. | Số tiền duy trì nhỏ hơn thời gian nhân sự, gia tăng lợi nhuận vận hành thông qua tối ưu điểm chạm tư vấn trực tuyến (touchpoint). | Kéo dài khả năng bán hàng 24/7 với biên độ chi phí hầu như bằng 0 khi scale (khả năng tiếp cận thị trường quy mô rộng). |
+| **Assumption** | Có khoảng 100 truy cập mới/ngày, đạt 40% khả năng tương tác duy trì đủ phiên AI. | Đạt mốc 500 truy cập/ngày, tỷ lệ hoàn tất tương tác là 60%. | Mở rộng diện tiếp cận lên 2000 truy cập/ngày, tỷ lệ hoàn thành 80%. |
+| **Cost** | Trả phí ~$1/ngày cho toàn bộ lượt API Inference model nhỏ gọn. | ~$5/ngày chi phí hệ thống. | ~$20/ngày tổng chi phí server lẫn model. |
+| **Benefit** | Chia sẻ một phần nhẹ sức đỡ (tiết kiệm ước tính khoảng 3 giờ nhân sự tương tác tư vấn chát/ngày). | Chia tải hiệu quả tới 15 giờ xử lý khách hàng thông tin cơ bản; phân tách luồng nhóm khách mua thực tế. | Tối giản nguồn lực (cắt giảm hơn 60 giờ làm việc) - thu gom trọn bộ các lead khách hàng ở bước chuyển tiếp phễu nóng (mục chat hẹn lịch lái thử). |
+| **Net** | Hệ thống bù đắp được chi phí trực tiếp nhưng chênh lệch chưa ấn tượng. | Số tiền duy trì nhỏ hơn thời gian nhân sự, gia tăng lợi nhuận vận hành thông qua tối ưu điểm chạm tư vấn trực tuyến (touchpoint). | Kéo dài khả năng bán hàng 24/7 với biên độ chi phí hầu như bằng 0 khi scale (khả năng tiếp cận thị trường quy mô rộng). |
 
-**Điều kiện ngừng đánh giá (Kill criteria):** 
+**Kill criteria:** 
 Dự án được xem xét đánh giá lại hoặc dừng hẳn khi thống kê định kỳ cho ra điểm chuẩn gợi ý chính xác (top-3 match) suy thoái dưới mức 50% quá 2 tháng liên tiếp, khiến chi phí chuyển lệnh đến nhân viên trực ngang bằng với việc không có công cụ AI.
 
 ---
 
-## 6. Mini AI Spec (Cấu trúc kỹ thuật tổng quan)
+## 6. Mini AI Spec (Cấu trúc kỹ thuật tổng quan):
 
 Ứng dụng "VinFast Car Recommender" khai thác dòng mô hình xử lý LangGraph đa trình tự với 8 node thực thi chủ lục. Flow chuẩn xử lý qua các bước:
 Khởi tạo giao diện chat → Node Router chuyển tiếp (kiêm nhiệm rào chắn Guard từ chối tác vụ Off-topic) → Node Elicitation (làm giàu ngữ cảnh khách hàng) → Profile tổng hợp dữ liệu → Cơ chế Retrieval vector fan-out cho hệ tư vấn → Synthesizer tổng hợp quyết định chung → Response Output trả thẳng về Client → Endpoint thu thập độ tương tác (Feedback).
 
 Nền tảng tri thức (Knowledge Base) sử dụng thông số truy xuất trực tiếp từ cổng điện tử `vinfast.vn` và kho dữ liệu crawl độc quyền trải dài từ YouTube Reviews đến Nhóm Cộng đồng Facebook (tạo sự liên kết định tính khách quan). Hạ tầng chạy nhúng trên nền Vector Search FAISS/ChromaDB đồng thời trang bị khả năng kéo API lấy dữ liệu thực như lịch khuyến mãi theo ngày.
 
-**Phân công thực thi định hướng nhân sự:**
+**Nhân sự:**
 
 | Người phụ trách | Hạng mục nhiệm vụ (Task Specification) |
 |---|---|
