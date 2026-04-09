@@ -1,0 +1,1 @@
+/opt/homebrew/opt/cloudflared/bin/cloudflared tunnel --url http://localhost:3000
