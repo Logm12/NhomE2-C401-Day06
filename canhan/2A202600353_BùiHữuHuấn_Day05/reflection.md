@@ -22,7 +22,7 @@ AI Data Engineer + Retrieval Engineer. Phụ trách crawl dữ liệu từ YouTu
 
   * Convert data → embedding (sentence-transformers)
   * Build vector database bằng Qdrant
-  * Implement hàm `search_vectordb(query, top_k)`
+  * Implement QdrantVectorStore có `search(query, top_k,...)` 
 * Tích hợp web search:
 
   * Viết tool lấy dữ liệu realtime (giá, chính sách, thông tin mới)
